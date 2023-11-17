@@ -1,17 +1,26 @@
 
-def maior_palavra(word):
-    empty = ""
-    if len[lista(word)] > len(empty):
-        maior = palavra
-        print(f"{palavra} é a maior palavrada lista.")
+def maior_palavra(list_of_words):
+    maior = ""
+    for item in list_of_words:
+        if len(item)> len(maior):
+            maior = item
+    return maior
 
 
 
 lista_palavras = []
 
+quantidade = int(input("Digite quantos nomes deseja inserir: "))
 
-while True:
-    palavra = str(input("digite uma palavra: "))
-    lista_palavras.append([palavra])
+for i in range(quantidade):
+    palavra = str(input("digite uma palavra: ")).strip()
+    lista_palavras.append(palavra)
 
-    for palavra in lista_palavras
+# while True:
+#     palavra = str(input("digite uma palavra: ")).strip()
+#     if palavra == "sair":
+#         break
+#     lista_palavras.append(palavra)
+
+
+print(f"a maior palavra da lista digitada é {maior_palavra(lista_palavras)}.")
