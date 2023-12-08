@@ -9,7 +9,7 @@ lista_clientes = []
 while True:
     novo_cadastro = str(input("Deseja cadastrar novo cliente? Digite S | N: ")).upper().strip()
     if novo_cadastro == "N":
-        print("Até logo!")
+        print("Vamos para o sorteio!")
         break
     elif novo_cadastro == "S":
         cliente = {
