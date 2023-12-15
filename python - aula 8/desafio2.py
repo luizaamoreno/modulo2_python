@@ -49,8 +49,19 @@ def visualizar_alunos():
            """) 
 
 def deletar_aluno():
-    remover = str(input("Qual nome do aluno deseja deletar? "))
-    lista_alunos.pop(remover)
+    for aluno in lista_alunos:  
+        notas = aluno['notas']  
+        print(f"""
+        Nome: {aluno['nome']}
+        CPF: {aluno['cpf']}
+                
+           """)
+    remover = str(input("Digite o cpf do aluno que você quer deletar:"))
+    for aluno_atual in lista_de_alunos:
+        if aluno_atual["CPF"] == remover:
+            posicao_na_lista = lista_de_alunos.index(aluno_atual)
+            lista_de_alunos.pop(posicao_na_lista)
+    print("Aluno excluído com sucesso")
 
 while True:
     print("""O que deseja acessar? 
